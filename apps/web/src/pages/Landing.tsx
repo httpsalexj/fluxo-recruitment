@@ -64,7 +64,6 @@ export function Landing() {
             [Shield, 'Confiança', 'Processo com login Discord, histórico de análise e painel protegido.']
           ].map(([Icon, title, text]) => (
             <div key={String(title)} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-              {/* @ts-expect-error dynamic icon */}
               <Icon className="mb-5 text-indigo-600" size={28} />
               <h3 className="text-xl font-black text-slate-950 dark:text-white">{String(title)}</h3>
               <p className="mt-3 leading-7 text-slate-600 dark:text-slate-300">{String(text)}</p>
