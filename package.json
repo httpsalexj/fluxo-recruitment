@@ -1,0 +1,24 @@
+{
+  "name": "fluxo-store-recruitment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistema completo de recrutamento web + Discord para Fluxo Store.",
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "dev": "concurrently -n api,web,bot -c auto \"npm run dev --workspace @fluxo/api\" \"npm run dev --workspace @fluxo/web\" \"npm run dev --workspace @fluxo/bot\"",
+    "dev:api": "npm run dev --workspace @fluxo/api",
+    "dev:web": "npm run dev --workspace @fluxo/web",
+    "dev:bot": "npm run dev --workspace @fluxo/bot",
+    "build": "npm run build --workspaces",
+    "lint": "npm run lint --workspaces --if-present",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  }
+}
