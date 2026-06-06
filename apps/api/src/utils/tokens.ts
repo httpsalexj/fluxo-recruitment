@@ -1,4 +1,3 @@
-@'
 import jwt, { type Secret, type SignOptions } from "jsonwebtoken";
 import { env } from "../config/env.js";
 
@@ -29,4 +28,3 @@ export function signToken(payload: CandidateTokenPayload | AdminTokenPayload) {
 export function verifyToken<T>(token: string): T {
   return jwt.verify(token, env.JWT_SECRET as Secret) as T;
 }
-'@ | Set-Content -Path apps\api\src\utils\tokens.ts -Encoding UTF8
